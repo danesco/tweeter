@@ -3,12 +3,8 @@ $(document).ready(function() {
 
   text.addEventListener('keyup', function(event){
     const counter = this.parentNode.children[2];
-    let counterNum = counter.innerText;
-    let jText = $(this);
-    let charCount = jText.val().length;
-    console.log(counterNum, charCount);
+    let charCount = $(this).val().length;
     counter.innerText = 140 - charCount;
-    console.log(counter);
     if(charCount > 140){
       $(counter).addClass('invalidText');
     }else{

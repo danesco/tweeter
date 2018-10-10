@@ -28,6 +28,10 @@ main {
   margin-top: 140px;
 }
 
+/*
+ * Additional CSS can be defined below or in other CSS files, as per instructions
+ */
+
 .container {
   background-color: white;
   padding: 20px;
@@ -37,6 +41,24 @@ main {
 .invalidText {
   color: red;
 }
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+
+section article div{
+  margin: 30px;
+}
+
+section article header {
+  padding: 15px;
+  background-color: #eee;
+}
+
+section article footer {
+  border: #eee solid 1px;
+  margin: 10px 0 0;
+  padding: 5px;
+}
+
+article {
+  border: #eee solid;
+  margin: 10px 0;
+  border-radius: 10px;
+}
