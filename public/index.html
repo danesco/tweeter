@@ -7,6 +7,7 @@
     <!-- External CSS -->
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
@@ -17,7 +18,6 @@
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
     <!-- App JS -->
-    <script type="text/javascript" src="/scripts/app.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   </head>
 
@@ -41,18 +41,21 @@
           </form>
         </div>
       </section>
-      <section>
-        <article>
+      <section id="tweets-container">
+        <article class="tweet">
           <header>
-            name avatar and handle
+            <img src="">
+            <h1>Username</h1>
+            <h3>@handle</h3>
           </header>
-          <div>this is where the tweet should be</div>
+          <div class="tweetText">This is the tweet</div>
           <footer>
-            days
+            <section class="time"> 10 days</section>
           </footer>
         </article>
       </section>
     </main>
 
   </body>
+
 </html>
