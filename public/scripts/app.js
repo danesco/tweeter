@@ -12,7 +12,7 @@ $(() => {
   const tweetText = tweet.content.text;
   const timeStamp = tweet.created_at;
 
-  const article = $('<article>');
+  const article = $('<article>').addClass('tweet');
   // //for the header
   const container = $("<header>");
   const image = $(`<img src ='${avatar}'>`);
@@ -31,7 +31,7 @@ $(() => {
   let finalFoot = footer.append(section).addClass('time');
 
 
-  return article.append(finalHead).append(division).append(finalFoot);
+  return article.append(finalHead).append(division).append(finalFoot); //append and return everything
 
 
  }
@@ -45,7 +45,29 @@ $(() => {
     }
 }
 
-renderTweets(data);
+// renderTweets(data);
+
+
+$("#new-tweet").on('submit', (event) => {
+  event.preventDefault();
+
+  let data = ($(event.target).serialize()); //taking data from the input field and turning it into a query string
+
+  $.ajax('/tweets', {method: 'POST', data: data}).then(() => {
+  });
+
+});
+
+function loadTweets(){
+  $.ajax('/tweets', {method: 'GET'})
+  .then(function(tweet){
+    $('#tweets-container').empty();
+    renderTweets(tweet);
+  });
+}
+
+loadTweets();
+
 });
 
 
