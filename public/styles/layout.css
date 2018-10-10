@@ -17,7 +17,7 @@ html {
 body {
   margin: 0;
   color: #244751;
-  background-color: white;
+  background-color: #eee;
   font-family: 'Roboto Condensed', sans-serif;
 }
 
@@ -28,6 +28,15 @@ main {
   margin-top: 140px;
 }
 
+.container {
+  background-color: white;
+  padding: 20px;
+  height: 1500px;
+}
+
+.invalidText {
+  color: red;
+}
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
