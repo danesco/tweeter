@@ -41,7 +41,7 @@ $(() => {
     // calls createTweetElement for each tweet
     // takes return value and appends it to the tweets container
     for(let i = 0; i < tweets.length; i ++){
-      $('#tweets-container').append(createTweetElement(tweets[i]));
+      $('#tweets-container').prepend(createTweetElement(tweets[i]));
     }
 }
 
@@ -53,9 +53,18 @@ $("#new-tweet").on('submit', (event) => {
 
   let data = ($(event.target).serialize()); //taking data from the input field and turning it into a query string
 
-  $.ajax('/tweets', {method: 'POST', data: data}).then(() => {
-  });
+  let inputText = $(event.target).children('textarea').val();
 
+  if (inputText === '') {
+    alert("Please enter something");
+  } else if (inputText.length > 140) {
+    alert("Too many characters")
+  } else {
+
+    $.ajax('/tweets', {method: 'POST', data: data}).then(() => {
+      loadTweets();
+    });
+  }
 });
 
 function loadTweets(){
