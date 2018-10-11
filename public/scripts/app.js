@@ -45,9 +45,8 @@ $(() => {
   }
 }
 
-// renderTweets(data);
 
-
+//action when submitting
 $("#new-tweet").on('submit', (event) => {
   event.preventDefault();
 
@@ -62,7 +61,7 @@ $("#new-tweet").on('submit', (event) => {
     $('.error').text("Too many characters!").hide();
     $('.error').slideDown();
   } else {
-    $.ajax('/tweets', {method: 'POST', data: data}).then(() => {
+    $.ajax('/tweets', {method: 'POST', data: data}).then(() => { //using ajax to make a post request and render the new tweets without reloading the page
       loadTweets();
       $('.error').hide();
     });
