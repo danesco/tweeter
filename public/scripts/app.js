@@ -38,11 +38,11 @@ $(() => {
 
  function renderTweets(tweets) {
   // loops through tweets
-    // calls createTweetElement for each tweet
-    // takes return value and appends it to the tweets container
-    for(let i = 0; i < tweets.length; i ++){
-      $('#tweets-container').prepend(createTweetElement(tweets[i]));
-    }
+  // calls createTweetElement for each tweet
+  // takes return value and appends it to the tweets container
+  for(let i = 0; i < tweets.length; i ++){
+    $('#tweets-container').prepend(createTweetElement(tweets[i]));
+  }
 }
 
 // renderTweets(data);
@@ -56,13 +56,15 @@ $("#new-tweet").on('submit', (event) => {
   let inputText = $(event.target).children('textarea').val();
 
   if (inputText === '') {
-    alert("Please enter something");
+    $('.error').text("Please enter a tweet before submitting!").hide();
+    $('.error').slideDown("slow");
   } else if (inputText.length > 140) {
-    alert("Too many characters")
+    $('.error').text("Too many characters!").hide();
+    $('.error').slideDown();
   } else {
-
     $.ajax('/tweets', {method: 'POST', data: data}).then(() => {
       loadTweets();
+      $('.error').hide();
     });
   }
 });
@@ -77,6 +79,7 @@ function loadTweets(){
 
 loadTweets();
 
+//button to toggle compose tweet box
 $('.compose').on("click", (event) => {
   $('.new-tweet').slideToggle('slow');
   $('textarea').focus();

@@ -43,6 +43,7 @@ main {
 
 section article div{
   margin: 30px;
+  word-wrap: break-word;
 }
 
 section article header {
