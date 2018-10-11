@@ -24,8 +24,9 @@ body {
 main {
   width: 450px;
   text-align: center;
-  margin-left: 225px;
   margin-top: 140px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 /*
