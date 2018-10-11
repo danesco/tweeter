@@ -26,3 +26,19 @@ img {
   line-height: 2.8;
 }
 
+nav button {
+  float: right;
+  margin-top: 14px;
+  background-color: #eee;
+  height: 50px;
+  width: 100px;
+  border-radius: 10px;
+  color: #00a087;
+  border: steelblue solid;
+}
+
+nav button:hover {
+  border: black solid 3px;
+  color: black;
+  background: white;
+}

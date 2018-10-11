@@ -4,6 +4,7 @@ background: #eeeeee;
 box-sizing: inherit;
 border-radius: 10px;
 padding: 10px 10px 35px 10px;
+position: center;
 }
 
 textarea {
@@ -29,4 +30,9 @@ input {
 
 .counter {
   float: right;
+}
+
+
+.error {
+  display: none;
 }
