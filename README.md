@@ -2,7 +2,11 @@
 
 Tweeter is a simple, single-page Twitter clone. It allows you to post a tweet and see it load it on the page.
 
+## Screen Shots
 
+!["Compose tweet button"](https://github.com/danesco/tweeter/blob/master/docs/compose-button.gif?raw=true)
+!["Error message"](https://github.com/danesco/tweeter/blob/master/docs/error-message.gif?raw=true)
+!["Posting a tweet"](https://github.com/danesco/tweeter/blob/master/docs/writting-a-tweet.gif?raw=true)
 
 ## Getting Started
 
