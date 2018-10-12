@@ -28,7 +28,12 @@ $(() => {
   const footer = $('<footer>');
   const section = $('<section>').text(timeStamp);
 
-  let finalFoot = footer.append(section).addClass('time');
+  const heart = $('<img>').attr("src", "/images/heart.png").addClass('icon');
+  const flag  = $('<img>').attr("src", "/images/flag.png").addClass('icon');
+  const reblog = $('<img>').attr("src", "/images/reblog.png").addClass('icon');
+
+
+  let finalFoot = footer.append(section).addClass('time').append(heart, flag, reblog);
 
 
   return article.append(finalHead).append(division).append(finalFoot); //append and return everything
