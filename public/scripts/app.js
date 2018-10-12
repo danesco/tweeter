@@ -67,8 +67,10 @@ $("#new-tweet").on('submit', (event) => {
     $('.error').slideDown();
   } else {
     $.ajax('/tweets', {method: 'POST', data: data}).then(() => { //using ajax to make a post request and render the new tweets without reloading the page
-      loadTweets();
+      $(event.target).children('textarea').val(''); //clears text area
+      $('.counter').text(140);
       $('.error').hide();
+      loadTweets();
     });
   }
 });
