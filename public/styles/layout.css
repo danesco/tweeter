@@ -56,6 +56,8 @@ section article footer {
   border: #eee solid 1px;
   margin: 10px 0 0;
   padding: 5px;
+  border-left: 0px;
+  border-right: 0px;
 }
 
 article {
@@ -65,29 +67,23 @@ article {
 }
 
 article header img {
-  align-content: right;
   width: 40px;
   height: 40px;
   margin-right: 5px;
-  /*display: inline;*/
-
-  /*float: left;*/
+  margin-top: -10px;
 }
 
 article header h1 {
   text-align: left;
   margin-top: -5px;
   float: left;
-
-  /*position: inline-block;*/
-  /*float:left;*/
-
-
+  font-size: 1.5em;
 }
 
 article header h3 {
   text-align: right;
   margin-top: 1px;
+  font-size: 1em;
 }
 
 .tweetText {
@@ -121,5 +117,4 @@ article:hover .icon {
 
 img {
   float: left;
-  margin-top: -17px;
 }

@@ -11,6 +11,4 @@ $(document).ready(function() {
       $(counter).removeClass('invalidText');
     }
   });
-
-
 });
