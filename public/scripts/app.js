@@ -26,7 +26,7 @@ $(() => {
 
   // //for footer
   const footer = $('<footer>');
-  const section = $('<section>').text(timeStamp);
+  const section = $('<section>').text(moment(timeStamp).startOf('hour').fromNow());
 
   const heart = $('<img>').attr("src", "/images/heart.png").addClass('icon');
   const flag  = $('<img>').attr("src", "/images/flag.png").addClass('icon');
