@@ -96,10 +96,10 @@ article header h3 {
   text-align: left;
 }
 
-article:hover {
-  border: black solid 2px;
-}
 
+.tweet:hover {
+  opacity: 1;
+}
 
 .icon {
   height: 20px;
@@ -117,4 +117,19 @@ article:hover .icon {
 
 img {
   float: left;
+}
+
+.tweet {
+  opacity: 0.7;
+}
+
+.submit:hover {
+  background-color: #00a087;
+  color: #eee;
+}
+
+.submit {
+  background-color: #7fd8ca;;
+  border-radius: 8px;
+  border: #00a087 solid 1px;
 }

@@ -81,7 +81,7 @@ loadTweets();
   $('.compose').on("click", (event) => {
     $('.new-tweet').slideToggle('slow');
     $('textarea').focus();
-  })
+  });
 
 });
 
